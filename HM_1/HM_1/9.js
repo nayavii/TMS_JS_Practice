@@ -5,13 +5,10 @@
 
 const checkStringLength = (string, number) => {
 
-  const lenthOfTheString = string.length
+  const lenthOfTheString = string.length;
 
-  if (lenthOfTheString > number) {
-    return 'String is too long!';
-  } else {
-    return string;
-  }
+  return lenthOfTheString > number ? 'String is too long!' : string;
+  
 }
 
 console.log(checkStringLength ('Hi', 1));

@@ -7,13 +7,16 @@
 
 const checkLetterCase = (letter) => {
 
+  const optimizedChar = typeof letter === 'string' ? letter.trim() : null;
+
+  if (!optimizedChar || optimizedChar.length > 1) {
+    return;
+  }
+
   const uppercaseLetter = letter.toUpperCase();
 
-  if (letter === uppercaseLetter){
-    return 'Оууу май, большая буква!';
-  } else {
-    return 'Нет уж, маленькие буквы - скучно'
-  }
+  return letter === uppercaseLetter ? 'Оууу май, большая буква!' : 'Нет уж, маленькие буквы - скучно';
+
 }
 
-console.log(checkLetterCase('f'));
+console.log(checkLetterCase(9));

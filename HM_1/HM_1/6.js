@@ -7,20 +7,20 @@
 
 const capitalyzedWord = (string) => {
 
-  const isEven = string.length % 2 === 0;
+  const isCharsAmountEven = string.length % 2 === 0;
 
   const firstCaptitalLetter = string[0].toUpperCase();
   const restChars = string.slice(1).toLowerCase();
 
-  const restCharsOfEven = string.slice(1, -1).toLowerCase();
-  const lastCaptitalLetter = string.slice(-1).toUpperCase();
+  if (isCharsAmountEven) {
+    const restCharsOfEven = string.slice(1, -1).toLowerCase();
+    const lastCaptitalLetter = string.slice(-1).toUpperCase();
 
-
-  if (isEven) {
     return `${firstCaptitalLetter}${restCharsOfEven}${lastCaptitalLetter}`;
-  } else {
-    return `${firstCaptitalLetter}${restChars}`;
-  }
+  } 
+  
+  return `${firstCaptitalLetter}${restChars}`;
+  
 }
 
 console.log(capitalyzedWord('javaScriP'));

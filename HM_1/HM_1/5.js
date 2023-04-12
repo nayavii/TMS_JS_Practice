@@ -2,7 +2,7 @@
 
 const deleteChars = (string) => {
 
-  const newWord = string.slice (1, string.length-1)
+  const newWord = string.slice (1, -1)
 
   return newWord
 }
